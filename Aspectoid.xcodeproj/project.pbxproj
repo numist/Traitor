@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC60560919070A6400FDCF6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60560819070A6400FDCF6D /* Foundation.framework */; };
+		BC60560E19070A6400FDCF6D /* Aspectoid.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC60560D19070A6400FDCF6D /* Aspectoid.h */; };
+		BC60561019070A6400FDCF6D /* Aspectoid.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60560F19070A6400FDCF6D /* Aspectoid.m */; };
+		BC60561719070A6400FDCF6D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60561619070A6400FDCF6D /* XCTest.framework */; };
+		BC60561819070A6400FDCF6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60560819070A6400FDCF6D /* Foundation.framework */; };
+		BC60561A19070A6400FDCF6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60561919070A6400FDCF6D /* UIKit.framework */; };
+		BC60561D19070A6400FDCF6D /* libAspectoid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60560519070A6400FDCF6D /* libAspectoid.a */; };
+		BC60562319070A6500FDCF6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC60562119070A6500FDCF6D /* InfoPlist.strings */; };
+		BC60562519070A6500FDCF6D /* AspectoidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60562419070A6500FDCF6D /* AspectoidTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC60561B19070A6400FDCF6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC6055FD19070A6400FDCF6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC60560419070A6400FDCF6D;
+			remoteInfo = Aspectoid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC60560319070A6400FDCF6D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				BC60560E19070A6400FDCF6D /* Aspectoid.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BC60560519070A6400FDCF6D /* libAspectoid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAspectoid.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC60560819070A6400FDCF6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BC60560C19070A6400FDCF6D /* Aspectoid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aspectoid-Prefix.pch"; sourceTree = "<group>"; };
+		BC60560D19070A6400FDCF6D /* Aspectoid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aspectoid.h; sourceTree = "<group>"; };
+		BC60560F19070A6400FDCF6D /* Aspectoid.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aspectoid.m; sourceTree = "<group>"; };
+		BC60561519070A6400FDCF6D /* AspectoidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AspectoidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC60561619070A6400FDCF6D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BC60561919070A6400FDCF6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BC60562019070A6400FDCF6D /* AspectoidTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AspectoidTests-Info.plist"; sourceTree = "<group>"; };
+		BC60562219070A6500FDCF6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC60562419070A6500FDCF6D /* AspectoidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AspectoidTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC60560219070A6400FDCF6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC60560919070A6400FDCF6D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC60561219070A6400FDCF6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC60561D19070A6400FDCF6D /* libAspectoid.a in Frameworks */,
+				BC60561719070A6400FDCF6D /* XCTest.framework in Frameworks */,
+				BC60561A19070A6400FDCF6D /* UIKit.framework in Frameworks */,
+				BC60561819070A6400FDCF6D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC6055FC19070A6400FDCF6D = {
+			isa = PBXGroup;
+			children = (
+				BC60560A19070A6400FDCF6D /* Aspectoid */,
+				BC60561E19070A6400FDCF6D /* AspectoidTests */,
+				BC60560719070A6400FDCF6D /* Frameworks */,
+				BC60560619070A6400FDCF6D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC60560619070A6400FDCF6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC60560519070A6400FDCF6D /* libAspectoid.a */,
+				BC60561519070A6400FDCF6D /* AspectoidTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC60560719070A6400FDCF6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC60560819070A6400FDCF6D /* Foundation.framework */,
+				BC60561619070A6400FDCF6D /* XCTest.framework */,
+				BC60561919070A6400FDCF6D /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC60560A19070A6400FDCF6D /* Aspectoid */ = {
+			isa = PBXGroup;
+			children = (
+				BC60560D19070A6400FDCF6D /* Aspectoid.h */,
+				BC60560F19070A6400FDCF6D /* Aspectoid.m */,
+				BC60560B19070A6400FDCF6D /* Supporting Files */,
+			);
+			path = Aspectoid;
+			sourceTree = "<group>";
+		};
+		BC60560B19070A6400FDCF6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC60560C19070A6400FDCF6D /* Aspectoid-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC60561E19070A6400FDCF6D /* AspectoidTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC60562419070A6500FDCF6D /* AspectoidTests.m */,
+				BC60561F19070A6400FDCF6D /* Supporting Files */,
+			);
+			path = AspectoidTests;
+			sourceTree = "<group>";
+		};
+		BC60561F19070A6400FDCF6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC60562019070A6400FDCF6D /* AspectoidTests-Info.plist */,
+				BC60562119070A6500FDCF6D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC60560419070A6400FDCF6D /* Aspectoid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC60562819070A6500FDCF6D /* Build configuration list for PBXNativeTarget "Aspectoid" */;
+			buildPhases = (
+				BC60560119070A6400FDCF6D /* Sources */,
+				BC60560219070A6400FDCF6D /* Frameworks */,
+				BC60560319070A6400FDCF6D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aspectoid;
+			productName = Aspectoid;
+			productReference = BC60560519070A6400FDCF6D /* libAspectoid.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BC60561419070A6400FDCF6D /* AspectoidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC60562B19070A6500FDCF6D /* Build configuration list for PBXNativeTarget "AspectoidTests" */;
+			buildPhases = (
+				BC60561119070A6400FDCF6D /* Sources */,
+				BC60561219070A6400FDCF6D /* Frameworks */,
+				BC60561319070A6400FDCF6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC60561C19070A6400FDCF6D /* PBXTargetDependency */,
+			);
+			name = AspectoidTests;
+			productName = AspectoidTests;
+			productReference = BC60561519070A6400FDCF6D /* AspectoidTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC6055FD19070A6400FDCF6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Scott Perry";
+			};
+			buildConfigurationList = BC60560019070A6400FDCF6D /* Build configuration list for PBXProject "Aspectoid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BC6055FC19070A6400FDCF6D;
+			productRefGroup = BC60560619070A6400FDCF6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC60560419070A6400FDCF6D /* Aspectoid */,
+				BC60561419070A6400FDCF6D /* AspectoidTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC60561319070A6400FDCF6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC60562319070A6500FDCF6D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC60560119070A6400FDCF6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC60561019070A6400FDCF6D /* Aspectoid.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC60561119070A6400FDCF6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC60562519070A6500FDCF6D /* AspectoidTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC60561C19070A6400FDCF6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC60560419070A6400FDCF6D /* Aspectoid */;
+			targetProxy = BC60561B19070A6400FDCF6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC60562119070A6500FDCF6D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC60562219070A6500FDCF6D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC60562619070A6500FDCF6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BC60562719070A6500FDCF6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC60562919070A6500FDCF6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Aspectoid.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Aspectoid/Aspectoid-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BC60562A19070A6500FDCF6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Aspectoid.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Aspectoid/Aspectoid-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BC60562C19070A6500FDCF6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Aspectoid/Aspectoid-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AspectoidTests/AspectoidTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BC60562D19070A6500FDCF6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Aspectoid/Aspectoid-Prefix.pch";
+				INFOPLIST_FILE = "AspectoidTests/AspectoidTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC60560019070A6400FDCF6D /* Build configuration list for PBXProject "Aspectoid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC60562619070A6500FDCF6D /* Debug */,
+				BC60562719070A6500FDCF6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC60562819070A6500FDCF6D /* Build configuration list for PBXNativeTarget "Aspectoid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC60562919070A6500FDCF6D /* Debug */,
+				BC60562A19070A6500FDCF6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC60562B19070A6500FDCF6D /* Build configuration list for PBXNativeTarget "AspectoidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC60562C19070A6500FDCF6D /* Debug */,
+				BC60562D19070A6500FDCF6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC6055FD19070A6400FDCF6D /* Project object */;
+}
