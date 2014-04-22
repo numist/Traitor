@@ -1,6 +1,6 @@
 //
-//  AspectoidTests.m
-//  AspectoidTests
+//  TraitorTests.m
+//  TraitorTests
 //
 //  Created by Scott Perry on 04/22/14.
 //  Copyright (c) 2014 Scott Perry. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface AspectoidTests : XCTestCase
+@interface TraitorTests : XCTestCase
 
 @end
 
-@implementation AspectoidTests
+@implementation TraitorTests
 
 - (void)setUp
 {

@@ -8,14 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		BC60560919070A6400FDCF6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60560819070A6400FDCF6D /* Foundation.framework */; };
-		BC60560E19070A6400FDCF6D /* Aspectoid.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC60560D19070A6400FDCF6D /* Aspectoid.h */; };
-		BC60561019070A6400FDCF6D /* Aspectoid.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60560F19070A6400FDCF6D /* Aspectoid.m */; };
+		BC60560E19070A6400FDCF6D /* Traitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC60560D19070A6400FDCF6D /* Traitor.h */; };
+		BC60561019070A6400FDCF6D /* Traitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60560F19070A6400FDCF6D /* Traitor.m */; };
 		BC60561719070A6400FDCF6D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60561619070A6400FDCF6D /* XCTest.framework */; };
 		BC60561819070A6400FDCF6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60560819070A6400FDCF6D /* Foundation.framework */; };
 		BC60561A19070A6400FDCF6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60561919070A6400FDCF6D /* UIKit.framework */; };
-		BC60561D19070A6400FDCF6D /* libAspectoid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60560519070A6400FDCF6D /* libAspectoid.a */; };
+		BC60561D19070A6400FDCF6D /* libTraitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60560519070A6400FDCF6D /* libTraitor.a */; };
 		BC60562319070A6500FDCF6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC60562119070A6500FDCF6D /* InfoPlist.strings */; };
-		BC60562519070A6500FDCF6D /* AspectoidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60562419070A6500FDCF6D /* AspectoidTests.m */; };
+		BC60562519070A6500FDCF6D /* TraitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60562419070A6500FDCF6D /* TraitorTests.m */; };
+		BC60563C19070B4000FDCF6D /* TRTraitObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60563B19070B4000FDCF6D /* TRTraitObject.m */; };
+		BC605642190712C700FDCF6D /* TRTrait.m in Sources */ = {isa = PBXBuildFile; fileRef = BC605641190712C700FDCF6D /* TRTrait.m */; };
+		BC605643190712F600FDCF6D /* TRTrait.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC605640190712C700FDCF6D /* TRTrait.h */; };
+		BC605644190712FD00FDCF6D /* TRTraitObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC60563A19070B4000FDCF6D /* TRTraitObject.h */; };
+		BC60564719071A9100FDCF6D /* NSSet+ASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60564619071A9100FDCF6D /* NSSet+ASAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +29,7 @@
 			containerPortal = BC6055FD19070A6400FDCF6D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BC60560419070A6400FDCF6D;
-			remoteInfo = Aspectoid;
+			remoteInfo = Traitor;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -35,24 +40,32 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				BC60560E19070A6400FDCF6D /* Aspectoid.h in CopyFiles */,
+				BC605644190712FD00FDCF6D /* TRTraitObject.h in CopyFiles */,
+				BC605643190712F600FDCF6D /* TRTrait.h in CopyFiles */,
+				BC60560E19070A6400FDCF6D /* Traitor.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BC60560519070A6400FDCF6D /* libAspectoid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAspectoid.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC60560519070A6400FDCF6D /* libTraitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTraitor.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC60560819070A6400FDCF6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BC60560C19070A6400FDCF6D /* Aspectoid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aspectoid-Prefix.pch"; sourceTree = "<group>"; };
-		BC60560D19070A6400FDCF6D /* Aspectoid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aspectoid.h; sourceTree = "<group>"; };
-		BC60560F19070A6400FDCF6D /* Aspectoid.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aspectoid.m; sourceTree = "<group>"; };
-		BC60561519070A6400FDCF6D /* AspectoidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AspectoidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC60560C19070A6400FDCF6D /* Traitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Traitor-Prefix.pch"; sourceTree = "<group>"; };
+		BC60560D19070A6400FDCF6D /* Traitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Traitor.h; sourceTree = "<group>"; };
+		BC60560F19070A6400FDCF6D /* Traitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Traitor.m; sourceTree = "<group>"; };
+		BC60561519070A6400FDCF6D /* TraitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC60561619070A6400FDCF6D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BC60561919070A6400FDCF6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		BC60562019070A6400FDCF6D /* AspectoidTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AspectoidTests-Info.plist"; sourceTree = "<group>"; };
+		BC60562019070A6400FDCF6D /* TraitorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TraitorTests-Info.plist"; sourceTree = "<group>"; };
 		BC60562219070A6500FDCF6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BC60562419070A6500FDCF6D /* AspectoidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AspectoidTests.m; sourceTree = "<group>"; };
+		BC60562419070A6500FDCF6D /* TraitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TraitorTests.m; sourceTree = "<group>"; };
+		BC60563A19070B4000FDCF6D /* TRTraitObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTraitObject.h; sourceTree = "<group>"; };
+		BC60563B19070B4000FDCF6D /* TRTraitObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTraitObject.m; sourceTree = "<group>"; };
+		BC605640190712C700FDCF6D /* TRTrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTrait.h; sourceTree = "<group>"; };
+		BC605641190712C700FDCF6D /* TRTrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTrait.m; sourceTree = "<group>"; };
+		BC60564519071A9100FDCF6D /* NSSet+ASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+ASAdditions.h"; sourceTree = "<group>"; };
+		BC60564619071A9100FDCF6D /* NSSet+ASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+ASAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC60561D19070A6400FDCF6D /* libAspectoid.a in Frameworks */,
+				BC60561D19070A6400FDCF6D /* libTraitor.a in Frameworks */,
 				BC60561719070A6400FDCF6D /* XCTest.framework in Frameworks */,
 				BC60561A19070A6400FDCF6D /* UIKit.framework in Frameworks */,
 				BC60561819070A6400FDCF6D /* Foundation.framework in Frameworks */,
@@ -81,8 +94,8 @@
 		BC6055FC19070A6400FDCF6D = {
 			isa = PBXGroup;
 			children = (
-				BC60560A19070A6400FDCF6D /* Aspectoid */,
-				BC60561E19070A6400FDCF6D /* AspectoidTests */,
+				BC60560A19070A6400FDCF6D /* Traitor */,
+				BC60561E19070A6400FDCF6D /* TraitorTests */,
 				BC60560719070A6400FDCF6D /* Frameworks */,
 				BC60560619070A6400FDCF6D /* Products */,
 			);
@@ -91,8 +104,8 @@
 		BC60560619070A6400FDCF6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC60560519070A6400FDCF6D /* libAspectoid.a */,
-				BC60561519070A6400FDCF6D /* AspectoidTests.xctest */,
+				BC60560519070A6400FDCF6D /* libTraitor.a */,
+				BC60561519070A6400FDCF6D /* TraitorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,37 +120,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BC60560A19070A6400FDCF6D /* Aspectoid */ = {
+		BC60560A19070A6400FDCF6D /* Traitor */ = {
 			isa = PBXGroup;
 			children = (
-				BC60560D19070A6400FDCF6D /* Aspectoid.h */,
-				BC60560F19070A6400FDCF6D /* Aspectoid.m */,
+				BC60564519071A9100FDCF6D /* NSSet+ASAdditions.h */,
+				BC60564619071A9100FDCF6D /* NSSet+ASAdditions.m */,
+				BC60560D19070A6400FDCF6D /* Traitor.h */,
+				BC60560F19070A6400FDCF6D /* Traitor.m */,
 				BC60560B19070A6400FDCF6D /* Supporting Files */,
+				BC60563A19070B4000FDCF6D /* TRTraitObject.h */,
+				BC60563B19070B4000FDCF6D /* TRTraitObject.m */,
+				BC605640190712C700FDCF6D /* TRTrait.h */,
+				BC605641190712C700FDCF6D /* TRTrait.m */,
 			);
-			path = Aspectoid;
+			path = Traitor;
 			sourceTree = "<group>";
 		};
 		BC60560B19070A6400FDCF6D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BC60560C19070A6400FDCF6D /* Aspectoid-Prefix.pch */,
+				BC60560C19070A6400FDCF6D /* Traitor-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BC60561E19070A6400FDCF6D /* AspectoidTests */ = {
+		BC60561E19070A6400FDCF6D /* TraitorTests */ = {
 			isa = PBXGroup;
 			children = (
-				BC60562419070A6500FDCF6D /* AspectoidTests.m */,
+				BC60562419070A6500FDCF6D /* TraitorTests.m */,
 				BC60561F19070A6400FDCF6D /* Supporting Files */,
 			);
-			path = AspectoidTests;
+			path = TraitorTests;
 			sourceTree = "<group>";
 		};
 		BC60561F19070A6400FDCF6D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BC60562019070A6400FDCF6D /* AspectoidTests-Info.plist */,
+				BC60562019070A6400FDCF6D /* TraitorTests-Info.plist */,
 				BC60562119070A6500FDCF6D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -146,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC60560419070A6400FDCF6D /* Aspectoid */ = {
+		BC60560419070A6400FDCF6D /* Traitor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC60562819070A6500FDCF6D /* Build configuration list for PBXNativeTarget "Aspectoid" */;
+			buildConfigurationList = BC60562819070A6500FDCF6D /* Build configuration list for PBXNativeTarget "Traitor" */;
 			buildPhases = (
 				BC60560119070A6400FDCF6D /* Sources */,
 				BC60560219070A6400FDCF6D /* Frameworks */,
@@ -158,14 +177,14 @@
 			);
 			dependencies = (
 			);
-			name = Aspectoid;
-			productName = Aspectoid;
-			productReference = BC60560519070A6400FDCF6D /* libAspectoid.a */;
+			name = Traitor;
+			productName = Traitor;
+			productReference = BC60560519070A6400FDCF6D /* libTraitor.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BC60561419070A6400FDCF6D /* AspectoidTests */ = {
+		BC60561419070A6400FDCF6D /* TraitorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC60562B19070A6500FDCF6D /* Build configuration list for PBXNativeTarget "AspectoidTests" */;
+			buildConfigurationList = BC60562B19070A6500FDCF6D /* Build configuration list for PBXNativeTarget "TraitorTests" */;
 			buildPhases = (
 				BC60561119070A6400FDCF6D /* Sources */,
 				BC60561219070A6400FDCF6D /* Frameworks */,
@@ -176,9 +195,9 @@
 			dependencies = (
 				BC60561C19070A6400FDCF6D /* PBXTargetDependency */,
 			);
-			name = AspectoidTests;
-			productName = AspectoidTests;
-			productReference = BC60561519070A6400FDCF6D /* AspectoidTests.xctest */;
+			name = TraitorTests;
+			productName = TraitorTests;
+			productReference = BC60561519070A6400FDCF6D /* TraitorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +209,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Scott Perry";
 			};
-			buildConfigurationList = BC60560019070A6400FDCF6D /* Build configuration list for PBXProject "Aspectoid" */;
+			buildConfigurationList = BC60560019070A6400FDCF6D /* Build configuration list for PBXProject "Traitor" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -202,8 +221,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC60560419070A6400FDCF6D /* Aspectoid */,
-				BC60561419070A6400FDCF6D /* AspectoidTests */,
+				BC60560419070A6400FDCF6D /* Traitor */,
+				BC60561419070A6400FDCF6D /* TraitorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,7 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC60561019070A6400FDCF6D /* Aspectoid.m in Sources */,
+				BC605642190712C700FDCF6D /* TRTrait.m in Sources */,
+				BC60564719071A9100FDCF6D /* NSSet+ASAdditions.m in Sources */,
+				BC60563C19070B4000FDCF6D /* TRTraitObject.m in Sources */,
+				BC60561019070A6400FDCF6D /* Traitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC60562519070A6500FDCF6D /* AspectoidTests.m in Sources */,
+				BC60562519070A6500FDCF6D /* TraitorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +263,7 @@
 /* Begin PBXTargetDependency section */
 		BC60561C19070A6400FDCF6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BC60560419070A6400FDCF6D /* Aspectoid */;
+			target = BC60560419070A6400FDCF6D /* Traitor */;
 			targetProxy = BC60561B19070A6400FDCF6D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -329,9 +351,14 @@
 		BC60562919070A6500FDCF6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/Aspectoid.dst;
+				DSTROOT = /tmp/Traitor.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Aspectoid/Aspectoid-Prefix.pch";
+				GCC_PREFIX_HEADER = "Traitor/Traitor-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					$SOURCE_ROOT,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -341,9 +368,14 @@
 		BC60562A19070A6500FDCF6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/Aspectoid.dst;
+				DSTROOT = /tmp/Traitor.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Aspectoid/Aspectoid-Prefix.pch";
+				GCC_PREFIX_HEADER = "Traitor/Traitor-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					$SOURCE_ROOT,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -359,12 +391,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Aspectoid/Aspectoid-Prefix.pch";
+				GCC_PREFIX_HEADER = "Traitor/Traitor-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "AspectoidTests/AspectoidTests-Info.plist";
+				INFOPLIST_FILE = "TraitorTests/TraitorTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -379,8 +411,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Aspectoid/Aspectoid-Prefix.pch";
-				INFOPLIST_FILE = "AspectoidTests/AspectoidTests-Info.plist";
+				GCC_PREFIX_HEADER = "Traitor/Traitor-Prefix.pch";
+				INFOPLIST_FILE = "TraitorTests/TraitorTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -389,7 +421,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC60560019070A6400FDCF6D /* Build configuration list for PBXProject "Aspectoid" */ = {
+		BC60560019070A6400FDCF6D /* Build configuration list for PBXProject "Traitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC60562619070A6500FDCF6D /* Debug */,
@@ -398,21 +430,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC60562819070A6500FDCF6D /* Build configuration list for PBXNativeTarget "Aspectoid" */ = {
+		BC60562819070A6500FDCF6D /* Build configuration list for PBXNativeTarget "Traitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC60562919070A6500FDCF6D /* Debug */,
 				BC60562A19070A6500FDCF6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		BC60562B19070A6500FDCF6D /* Build configuration list for PBXNativeTarget "AspectoidTests" */ = {
+		BC60562B19070A6500FDCF6D /* Build configuration list for PBXNativeTarget "TraitorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC60562C19070A6500FDCF6D /* Debug */,
 				BC60562D19070A6500FDCF6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
