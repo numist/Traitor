@@ -17,7 +17,7 @@ Mostly due to the lack of compiler support, the following limitations exist:
 Usage
 -----
 
-Examples coming soon.
+More explanation of the [example code](https://github.com/numist/Traitor/tree/master/Example) is coming soon.
 
 To wit, a trait is two things:
 
