@@ -17,16 +17,7 @@
 #pragma clang diagnostic ignored "-Wprotocol"
 
 
-@interface NNArrayTrait : TRTrait
-@end
-
-
-@interface NNArrayTrait (RequiredMethods)
-
-- (instancetype)initWithArray:(NSArray *)array;
-- (NSUInteger)count;
-- (id)objectAtIndex:(NSUInteger)index;
-
+@interface NNArrayTrait : TRTrait <NNArrayTrait>
 @end
 
 
@@ -130,21 +121,6 @@
 - (id)objectAtIndexedSubscript:(NSUInteger)index;
 {
     return [self objectAtIndex:index];
-}
-
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
-{
-    NSUInteger i, count;
-    for (i = state->state, count = 0; i < self.count && count < len; count++, i++) {
-        buffer[i] = self[i];
-    }
-    
-    state->state = i;
-    state->itemsPtr = buffer;
-    // Sorry, but I have no intrinsic state variables.
-    state->mutationsPtr = (__bridge void *)self;
-    
-    return count;
 }
 
 @end

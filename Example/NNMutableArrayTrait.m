@@ -21,19 +21,6 @@
 @end
 
 
-@interface NNMutableArrayTrait (RequiredMethods)
-
-- (instancetype)initWithArray:(NSArray *)array;
-- (NSUInteger)count;
-- (id)objectAtIndex:(NSUInteger)index;
-
-- (void)addObject:(id)anObject;
-- (void)removeLastObject;
-- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject;
-
-@end
-
-
 @implementation NNMutableArrayTrait
 
 - (void)addObject:(id)anObject;

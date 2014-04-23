@@ -17,15 +17,7 @@
 #pragma clang diagnostic ignored "-Wprotocol"
 
 
-@interface NNComprehensibleTrait : TRTrait
-@end
-
-
-@interface NNComprehensibleTrait (RequiredMethods)
-
-- (instancetype)initWithArray:(NSArray *)array;
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
-
+@interface NNComprehensibleTrait : TRTrait <NNComprehensibleTrait>
 @end
 
 

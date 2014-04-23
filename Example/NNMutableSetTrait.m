@@ -21,19 +21,6 @@
 @end
 
 
-@interface NNMutableSetTrait (RequiredMethods)
-
-- (instancetype)initWithArray:(NSArray *)array;
-- (NSUInteger)count;
-- (id)member:(id)object;
-- (NSEnumerator *)objectEnumerator;
-
-- (void)addObject:(id)object;
-- (void)removeObject:(id)object;
-
-@end
-
-
 @implementation NNMutableSetTrait
 
 - (void)addObjectsFromArray:(NSArray *)array;

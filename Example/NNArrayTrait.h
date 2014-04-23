@@ -38,9 +38,6 @@
 #pragma mark Object subscripting
 - (id)objectAtIndexedSubscript:(NSUInteger)index;
 
-#pragma mark NSFastEnumeration
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
-
 @end
 
 
@@ -64,9 +61,6 @@
 
 #pragma mark Object subscripting
 - (id)NNArrayTrait_objectAtIndexedSubscript:(NSUInteger)index;
-
-#pragma mark NSFastEnumeration
-- (NSUInteger)NNArrayTrait_countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
 
 @end
 

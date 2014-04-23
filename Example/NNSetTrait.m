@@ -17,17 +17,7 @@
 #pragma clang diagnostic ignored "-Wprotocol"
 
 
-@interface NNSetTrait : TRTrait
-@end
-
-
-@interface NNSetTrait (RequiredMethods)
-
-- (instancetype)initWithArray:(NSArray *)array;
-- (NSUInteger)count;
-- (id)member:(id)object;
-- (NSEnumerator *)objectEnumerator;
-
+@interface NNSetTrait : TRTrait <NNSetTrait>
 @end
 
 
@@ -125,32 +115,6 @@
     [result minusSet:objectsToRemove];
     
     return [[[self class] alloc] initWithArray:[result allObjects]];
-}
-
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
-{
-    NSArray *allObjects = [[self allObjects] sortedArrayUsingComparator:^(id obj1, id obj2) {
-        if (obj1 > obj2) {
-            return (NSComparisonResult)NSOrderedDescending;
-        } else if (obj1 < obj2) {
-            return (NSComparisonResult)NSOrderedAscending;
-        } else {
-            NSAssert(obj1 != obj2, @"Wait, sets aren't supposed to contain duplicates…");
-            return (NSComparisonResult)NSOrderedSame;
-        }
-    }];
-    
-    NSUInteger i, count;
-    for (i = state->state, count = 0; i < allObjects.count && count < len; count++, i++) {
-        buffer[i] = allObjects[i];
-    }
-    
-    state->state = i;
-    state->itemsPtr = buffer;
-    // Sorry, but I have no intrinsic state variables.
-    state->mutationsPtr = (__bridge void *)self;
-    
-    return count;
 }
 
 @end
