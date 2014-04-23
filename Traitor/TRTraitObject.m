@@ -130,8 +130,6 @@ static void copyMethodFromClass(Class destinationClass, SEL destinationSelector,
 {
     if (classImplementsMethod(destinationClass, destinationSelector)) { return; }
     
-    NSLog(@"Installing method %@ on class %@", NSStringFromSelector(destinationSelector), NSStringFromClass(destinationClass));
-    
     Method sourceMethod = class_getInstanceMethod(sourceClass, sourceSelector);
     
     BOOL success = class_addMethod(destinationClass, destinationSelector, method_getImplementation(sourceMethod), method_getTypeEncoding(sourceMethod));
@@ -198,7 +196,7 @@ static void installTraitMethodsForClass(Class class)
     // Check that this class implements the duplicates or explode
     for (NSString *duplicatedSelectorName in duplicatedSelectorNames) {
         if (!classImplementsMethod(class, NSSelectorFromString(duplicatedSelectorName))) {
-            @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"The method %@ is defined by multiple aspects and must be overridden by class %@", duplicatedSelectorName, NSStringFromClass(class)] userInfo:nil];
+            @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"The method %@ is defined by multiple aspects and must be overridden by class %@", duplicatedSelectorName, NSStringFromClass(class)] userInfo:@{ @"conflictingSelectors" : duplicatedSelectorNames }];
         }
     }
     
