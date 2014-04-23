@@ -49,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC1B458E19082BBD00246529 /* Traitor+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Traitor+Internal.h"; sourceTree = "<group>"; };
 		BC60560519070A6400FDCF6D /* libTraitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTraitor.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC60560819070A6400FDCF6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BC60560C19070A6400FDCF6D /* Traitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Traitor-Prefix.pch"; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 				BC60564519071A9100FDCF6D /* NSSet+ASAdditions.h */,
 				BC60564619071A9100FDCF6D /* NSSet+ASAdditions.m */,
 				BC60560D19070A6400FDCF6D /* Traitor.h */,
+				BC1B458E19082BBD00246529 /* Traitor+Internal.h */,
 				BC60560F19070A6400FDCF6D /* Traitor.m */,
 				BC60560B19070A6400FDCF6D /* Supporting Files */,
 				BC60563A19070B4000FDCF6D /* TRTraitObject.h */,

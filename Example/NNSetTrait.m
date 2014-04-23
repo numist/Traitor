@@ -13,29 +13,25 @@
 #import <Traitor/Traitor.h>
 
 
-@interface NNSetTrait : TRTrait <NNSetTrait>
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wprotocol"
+
+
+@interface NNSetTrait : TRTrait
+@end
+
+
+@interface NNSetTrait (RequiredMethods)
+
+- (instancetype)initWithArray:(NSArray *)array;
+- (NSUInteger)count;
+- (id)member:(id)object;
+- (NSEnumerator *)objectEnumerator;
+
 @end
 
 
 @implementation NNSetTrait
-
-- (NSUInteger)count;
-{
-    [self doesNotRecognizeSelector:_cmd];
-    __builtin_unreachable();
-};
-
-- (id)member:(id)object;
-{
-    [self doesNotRecognizeSelector:_cmd];
-    __builtin_unreachable();
-};
-
-- (NSEnumerator *)objectEnumerator;
-{
-    [self doesNotRecognizeSelector:_cmd];
-    __builtin_unreachable();
-};
 
 - (NSArray *)allObjects;
 {

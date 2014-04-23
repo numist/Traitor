@@ -17,16 +17,6 @@
 
 @implementation TRTraitObject
 
-// Returns whether class inherits from superclass.
-static BOOL classInheritsFromClass(Class superclass, Class class)
-{
-    if (class == superclass) { return YES; }
-    class = class_getSuperclass(class);
-    if (class == Nil) { return NO; }
-    
-    return classInheritsFromClass(superclass, class);
-}
-
 // Returns the class object for the protocol parameter, if it describes an aspect (if the class inherits from TRTrait)
 static Class aspectImplementationForProtocol(Protocol *protocol)
 {
@@ -134,30 +124,6 @@ static void copyMethodFromClass(Class destinationClass, SEL destinationSelector,
     
     BOOL success = class_addMethod(destinationClass, destinationSelector, method_getImplementation(sourceMethod), method_getTypeEncoding(sourceMethod));
     NSCAssert(success, @"Whyyyy");
-}
-
-// Returns a *mumble*enumerable*mumble* of all clases that have the given superclass in their ancestry.
-static id<NSFastEnumeration> allClassesInheritingFromClass(Class superclass)
-{
-    NSMutableSet *result = [NSMutableSet new];
-    
-    unsigned int classCount;
-    Class *classes = objc_copyClassList(&classCount);
-    
-    for (NSUInteger i = 0; i < classCount; i++) {
-        Class class = classes[i];
-        
-        if (classInheritsFromClass(superclass, class)) {
-            [result addObject:class];
-        }
-    }
-    
-    if (classes) {
-        free(classes);
-        classes = NULL;
-    }
-    
-    return result;
 }
 
 // Trait implementation stuff that should really be done at compile-time.

@@ -13,17 +13,23 @@
 #import <Traitor/Traitor.h>
 
 
-@interface NNComprehensibleTrait : TRTrait <NNComprehensibleTrait>
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wprotocol"
+
+
+@interface NNComprehensibleTrait : TRTrait
+@end
+
+
+@interface NNComprehensibleTrait (RequiredMethods)
+
+- (instancetype)initWithArray:(NSArray *)array;
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
+
 @end
 
 
 @implementation NNComprehensibleTrait
-
-- (instancetype)initWithArray:(NSArray *)array;
-{
-    [self doesNotRecognizeSelector:_cmd];
-    __builtin_unreachable();
-}
 
 - (instancetype)filter:(filter_block_t)block;
 {

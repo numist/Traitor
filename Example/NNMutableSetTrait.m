@@ -13,22 +13,28 @@
 #import <Traitor/Traitor.h>
 
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wprotocol"
+
+
 @interface NNMutableSetTrait : TRTrait <NNMutableSetTrait>
 @end
 
-@implementation NNMutableSetTrait
+
+@interface NNMutableSetTrait (RequiredMethods)
+
+- (instancetype)initWithArray:(NSArray *)array;
+- (NSUInteger)count;
+- (id)member:(id)object;
+- (NSEnumerator *)objectEnumerator;
 
 - (void)addObject:(id)object;
-{
-    [self doesNotRecognizeSelector:_cmd];
-    __builtin_unreachable();
-}
-
 - (void)removeObject:(id)object;
-{
-    [self doesNotRecognizeSelector:_cmd];
-    __builtin_unreachable();
-}
+
+@end
+
+
+@implementation NNMutableSetTrait
 
 - (void)addObjectsFromArray:(NSArray *)array;
 {
