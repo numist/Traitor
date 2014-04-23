@@ -1,7 +1,3 @@
-//
-//  TRTraitObject.m
-//  Traitor
-//
 //  Created by Scott Perry on 04/22/14.
 //  Copyright © 2014 Scott Perry.
 //
