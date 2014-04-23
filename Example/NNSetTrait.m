@@ -92,6 +92,45 @@
     return YES;
 }
 
+- (instancetype)setByUnionWithSet:(id<NNSetTrait>)otherSet;
+{
+    NSMutableSet *result = [NSMutableSet setWithArray:[self allObjects]];
+    
+    for (id object in otherSet) {
+        [result addObject:object];
+    }
+    
+    return [[[self class] alloc] initWithArray:[result allObjects]];
+}
+
+- (instancetype)setByRemovingFromSet:(id<NNSetTrait>)otherSet;
+{
+    NSMutableSet *result = [NSMutableSet setWithArray:[self allObjects]];
+    
+    for (id object in otherSet) {
+        if ([result containsObject:object]) {
+            [result removeObject:object];
+        }
+    }
+    
+    return [[[self class] alloc] initWithArray:[result allObjects]];
+}
+
+- (instancetype)setByIntersectionWithSet:(id<NNSetTrait>)otherSet;
+{
+    NSMutableSet *result = [NSMutableSet setWithArray:[self allObjects]];
+    NSMutableSet *objectsToRemove = [NSMutableSet new];
+    
+    for (id object in result) {
+        if (![otherSet containsObject:object]) {
+            [objectsToRemove addObject:object];
+        }
+    }
+    [result minusSet:objectsToRemove];
+    
+    return [[[self class] alloc] initWithArray:[result allObjects]];
+}
+
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
 {
     NSArray *allObjects = [[self allObjects] sortedArrayUsingComparator:^(id obj1, id obj2) {

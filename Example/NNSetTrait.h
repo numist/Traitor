@@ -32,6 +32,10 @@
 - (BOOL)isEqualToSet:(id<NNSetTrait>)otherSet;
 - (BOOL)isSubsetOfSet:(id<NNSetTrait>)otherSet;
 
+- (instancetype)setByUnionWithSet:(id<NNSetTrait>)otherSet;
+- (instancetype)setByRemovingFromSet:(id<NNSetTrait>)otherSet;
+- (instancetype)setByIntersectionWithSet:(id<NNSetTrait>)otherSet;
+
 #pragma mark NSFastEnumeration
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
 
@@ -51,6 +55,10 @@
 - (BOOL)NNSetTrait_intersectsSet:(id<NNSetTrait>)otherSet;
 - (BOOL)NNSetTrait_isEqualToSet:(id<NNSetTrait>)otherSet;
 - (BOOL)NNSetTrait_isSubsetOfSet:(id<NNSetTrait>)otherSet;
+
+- (instancetype)NNSetTrait_setByUnionWithSet:(id<NNSetTrait>)otherSet;
+- (instancetype)NNSetTrait_setByRemovingFromSet:(id<NNSetTrait>)otherSet;
+- (instancetype)NNSetTrait_setByIntersectionWithSet:(id<NNSetTrait>)otherSet;
 
 #pragma mark NSFastEnumeration
 - (NSUInteger)NNSetTrait_countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
