@@ -57,7 +57,7 @@
     return [[NSSet setWithArray:self.allObjects] description];
 }
 
-- (BOOL)intersectsSet:(NSSet *)otherSet;
+- (BOOL)intersectsSet:(id<NNSetTrait>)otherSet;
 {
     for (id object in self) {
         if ([otherSet containsObject:object]) {
@@ -68,7 +68,7 @@
     return NO;
 }
 
-- (BOOL)isEqualToSet:(NSSet *)otherSet;
+- (BOOL)isEqualToSet:(id<NNSetTrait>)otherSet;
 {
     if (self.count != otherSet.count) {
         return NO;
@@ -77,7 +77,7 @@
     return [self isSubsetOfSet:otherSet];
 }
 
-- (BOOL)isSubsetOfSet:(NSSet *)otherSet;
+- (BOOL)isSubsetOfSet:(id<NNSetTrait>)otherSet;
 {
     if (self.count > otherSet.count) {
         return NO;

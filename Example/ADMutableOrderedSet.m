@@ -36,6 +36,17 @@
 
 #pragma mark NNArrayTrait
 
+- (instancetype)initWithArray:(NSArray *)array;
+{
+    if (!(self = [self init])) { return nil; }
+    
+    for (id object in array) {
+        [self addObject:object];
+    }
+    
+    return self;
+}
+
 - (NSUInteger)count;
 {
     return self.backingArray.count;
@@ -64,6 +75,8 @@
 }
 
 #pragma mark NNSetTrait
+
+// -initWithArray: was already implemented as part of the NNArrayTrait section
 
 // -count was already implemented as part of the NNArrayTrait section
 

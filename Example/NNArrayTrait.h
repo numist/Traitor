@@ -10,9 +10,13 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol NNArrayTrait <NSObject, NSFastEnumeration>
+#import "NNComprehensibleTrait.h"
+
+
+@protocol NNArrayTrait <NSObject, NSFastEnumeration, NNComprehensibleTrait>
 
 @required
+- (instancetype)initWithArray:(NSArray *)array;
 - (NSUInteger)count;
 - (id)objectAtIndex:(NSUInteger)index;
 

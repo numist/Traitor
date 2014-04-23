@@ -31,6 +31,15 @@
 
 #pragma mark NNArrayTrait
 
+- (instancetype)initWithArray:(NSArray *)array;
+{
+    if (!(self = [super init])) { return nil; }
+    
+    self->_backingStore = [NSMutableArray arrayWithArray:array];
+    
+    return self;
+}
+
 - (NSUInteger)count;
 {
     return self.backingStore.count;

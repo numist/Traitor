@@ -10,50 +10,34 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NNComprehensibleTrait.h"
+
+typedef BOOL (^filter_block_t)(id item);
+typedef id (^map_block_t)(id item);
+typedef id (^reduce_block_t)(id accumulator, id item);
 
 
-@protocol NNSetTrait <NSObject, NSFastEnumeration, NNComprehensibleTrait>
+@protocol NNComprehensibleTrait <NSObject, NSFastEnumeration>
 
 @required
 - (instancetype)initWithArray:(NSArray *)array;
-- (NSUInteger)count;
-- (id)member:(id)object;
-- (NSEnumerator *)objectEnumerator;
 
 @optional
 
-#pragma mark Selected NSExtendedSet methods for example purposes
-- (NSArray *)allObjects;
-- (id)anyObject;
-- (BOOL)containsObject:(id)anObject;
-- (NSString *)description;
-- (BOOL)intersectsSet:(id<NNSetTrait>)otherSet;
-- (BOOL)isEqualToSet:(id<NNSetTrait>)otherSet;
-- (BOOL)isSubsetOfSet:(id<NNSetTrait>)otherSet;
-
-#pragma mark NSFastEnumeration
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
+- (instancetype)filter:(filter_block_t)block;
+- (instancetype)map:(map_block_t)block;
+- (id)reduce:(reduce_block_t)block;
 
 @end
 
 
 // These are installed by the traits runtime on classes that use this trait, so as to provide an unambiguous reference to trait-provided implementations in the event of a conflict.
-@protocol NNTaggedSetTrait <NNSetTrait>
+@protocol NNTaggedComprehensibleTrait <NNComprehensibleTrait>
 
 @optional
 
-#pragma mark Selected NSExtendedSet methods for example purposes
-- (NSArray *)NNSetTrait_allObjects;
-- (id)NNSetTrait_anyObject;
-- (BOOL)NNSetTrait_containsObject:(id)anObject;
-- (NSString *)NNSetTrait_description;
-- (BOOL)NNSetTrait_intersectsSet:(id<NNSetTrait>)otherSet;
-- (BOOL)NNSetTrait_isEqualToSet:(id<NNSetTrait>)otherSet;
-- (BOOL)NNSetTrait_isSubsetOfSet:(id<NNSetTrait>)otherSet;
-
-#pragma mark NSFastEnumeration
-- (NSUInteger)NNSetTrait_countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
+- (instancetype)NNComprehensibleTrait_filter:(filter_block_t)block;
+- (instancetype)NNComprehensibleTrait_map:(map_block_t)block;
+- (id)NNComprehensibleTrait_reduce:(reduce_block_t)block;
 
 @end
 

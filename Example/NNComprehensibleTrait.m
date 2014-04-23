@@ -8,65 +8,50 @@
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "ADMutableSet.h"
+#import "NNSetTrait.h"
+
+#import <Traitor/Traitor.h>
 
 
-@interface ADMutableSet ()
-
-@property (nonatomic, strong) NSMutableSet *backingStore;
-
+@interface NNComprehensibleTrait : TRTrait <NNComprehensibleTrait>
 @end
 
 
-@implementation ADMutableSet
-
-- (instancetype)init;
-{
-    if (!(self = [super init])) { return nil; }
-    
-    self->_backingStore = [NSMutableSet new];
-    
-    return self;
-}
-
-#pragma mark NNSetTrait
+@implementation NNComprehensibleTrait
 
 - (instancetype)initWithArray:(NSArray *)array;
 {
-    if (!(self = [self init])) { return nil; }
-    
-    for (id object in array) {
-        [self addObject:object];
+    [self doesNotRecognizeSelector:_cmd];
+    __builtin_unreachable();
+}
+
+- (instancetype)filter:(filter_block_t)block;
+{
+    NSMutableArray *resultArray = [NSMutableArray new];
+    for (id object in self) {
+        if (block(object)) {
+            [resultArray addObject:object];
+        }
     }
-    
-    return self;
+    return [[[self class] alloc] initWithArray:resultArray];
 }
 
-- (NSUInteger)count;
+- (instancetype)map:(map_block_t)block;
 {
-    return [self.backingStore count];
+    NSMutableArray *resultArray = [NSMutableArray new];
+    for (id object in self) {
+        [resultArray addObject:block(object)];
+    }
+    return [[[self class] alloc] initWithArray:resultArray];
 }
 
-- (id)member:(id)object;
+- (id)reduce:(reduce_block_t)block;
 {
-    return [self.backingStore member:object];
-}
-
-- (NSEnumerator *)objectEnumerator;
-{
-    return [self.backingStore objectEnumerator];
-}
-
-#pragma mark NNMutableSetTrait
-
-- (void)addObject:(id)object;
-{
-    [self.backingStore addObject:object];
-}
-
-- (void)removeObject:(id)object;
-{
-    [self.backingStore removeObject:object];
+    id accumulator = nil;
+    for (id object in self) {
+        accumulator = block(accumulator, object);
+    }
+    return accumulator;
 }
 
 @end

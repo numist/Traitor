@@ -31,6 +31,17 @@
 
 #pragma mark NNArrayTrait
 
+- (instancetype)initWithArray:(NSArray *)array;
+{
+    if (!(self = [self init])) { return nil; }
+    
+    for (id object in array) {
+        [self insertObject:object];
+    }
+    
+    return self;
+}
+
 - (NSUInteger)count;
 {
     return self.backingStore.count;
